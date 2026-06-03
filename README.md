@@ -12,13 +12,13 @@ Ho modellato il database per soddisfare i seguenti requisiti:
     
 - [x] Struttura dei **Corsi** all'interno dei Corsi di Laurea.
     
-- [x] Relazione molti-a-molti tra **Corsi e Insegnanti**.
+- [x] Relazione molti-a-molti tra **Corsi e Insegnanti**. (gestita tramite tabella **ponte**)
     
 - [x] Gestione degli **appelli d'Esame** per ogni corso.
     
 - [x] Associazione degli **Studenti** a un solo Corso di Laurea.
     
-- [x] Iscrizione degli **Studenti a più appelli** d'esame.
+- [x] Iscrizione degli **Studenti a più appelli** d'esame. (gestita tramite tabella **ponte**)
     
 - [x] Memorizzazione del **voto** (anche insufficiente) per ogni esame.
     
