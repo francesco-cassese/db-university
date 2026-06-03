@@ -1,0 +1,11 @@
+# Cartelle di sistema Windows
+Thumbs.db
+Desktop.ini
+
+# Cartelle di editor
+.vscode/
+
+# File temporanei
+*.log
+*.tmp
+*.bak
