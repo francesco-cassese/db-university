@@ -33,6 +33,6 @@ Ho modellato il database per soddisfare i seguenti requisiti:
     
 - **Voti:** I campi `grade` e `status` sono opzionali (`nullable`) per gestire correttamente l'iscrizione all'esame prima che venga dato il voto.
     
-- **Dati obbligatori:** Email (univoca) e data di nascita (obbligatoria) per avere un'anagrafica precisa.
+- **Integrità Dati:** Ho utilizzato vincoli `NOT NULL` per garantire la completezza delle informazioni e `UNIQUE` per evitare duplicati su email (studenti/docenti) e Codice Fiscale (studenti).
 
 
