@@ -46,15 +46,24 @@ SELECT COUNT(*)
 FROM `teachers`
 WHERE `teachers`.`phone` IS NULL;
 
-BONUS : Ho cercato il nome dei Dipartimenti che si trovano in una piazza
+BONUS : Ho selezionato i nomi dei Dipartimenti che si trovano in una piazza
 
 SELECT `name`
 FROM `departments`
 WHERE `departments`.`address` LIKE 'Piazza%';
 
-BONUS : Ho cercato gli studenti che sono nati nel 1990 e che non avevano il numero di registrazione.
+BONUS : Ho selezionato gli studenti che sono nati nel 1990 e che non avevano il numero di registrazione.
 
 SELECT *
 FROM `students`
 WHERE YEAR(`students`.`date_of_birth`) = 1990 && `students`.`registration_number` IS NULL;
 
+BONUS : Ho selezionato gli insegnati che hanno come provider hotmail oppure quelli che non hanno un numero di telefono registrato 
+SELECT *
+FROM `teachers`
+WHERE `teachers`.`email` LIKE '%@hotmail.com' || `teachers`.`phone` IS NULL;
+
+BONUS : Ho selezionato tutti i corsi che valgono tra i 5 e i 10 crediti cfu, estremi compresi.  
+SELECT *
+FROM `courses`
+WHERE `courses`.`cfu` >= 5 && `courses`.`cfu` <= 10 ;
