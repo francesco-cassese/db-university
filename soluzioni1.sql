@@ -21,3 +21,9 @@ MILESTONE 4 : Selezionare tutti i corsi del primo semestre del primo anno di un 
 SELECT *
 FROM `courses`
 WHERE `courses`.`period` = 'I semestre' && `courses`.`year` = 1; 
+
+MILESTONE 5 : Selezionare tutti gli appelli d esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020 (21)
+
+SELECT *
+FROM `exams`
+WHERE `exams`.`date` = '2020/06/20' && `exams`.`hour` > '14:00:00'; 
