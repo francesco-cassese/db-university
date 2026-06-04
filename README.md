@@ -1,7 +1,7 @@
 # Esercizio Database Università (`db-university`)
 
-#### Fase 1
-Questo README contiene lo schema del database per gestire le attività di un'università, sviluppato seguendo le specifiche richieste.
+## 🏗️ Fase 1: Modellazione Database (Giorno 1)
+In questa fase ho definito lo schema del database per gestire le attività di un'università, sviluppato seguendo le specifiche richieste.
 
 ## Obiettivi raggiunti 
 
@@ -36,8 +36,7 @@ Ho modellato il database per soddisfare i seguenti requisiti:
     
 - **Integrità Dati:** Ho utilizzato vincoli `NOT NULL` per garantire la completezza delle informazioni e `UNIQUE` per evitare duplicati su email (studenti/docenti) e Codice Fiscale (studenti).
 
-## 🔍 Fase 2: Interrogazione Dati
-
+## 🔍 Fase 2: Query SQL (Giorno 2)
 
 In questa sessione ho sviluppato le query per interrogare il database e gestire l'estrazione dei dati.
 
