@@ -51,3 +51,10 @@ BONUS : Ho cercato il nome dei Dipartimenti che si trovano in una piazza
 SELECT `name`
 FROM `departments`
 WHERE `departments`.`address` LIKE 'Piazza%';
+
+BONUS : Ho cercato gli studenti che sono nati nel 1990 e che non avevano il numero di registrazione.
+
+SELECT *
+FROM `students`
+WHERE YEAR(`students`.`date_of_birth`) = 1990 && `students`.`registration_number` IS NULL;
+
