@@ -27,3 +27,9 @@ MILESTONE 5 : Selezionare tutti gli appelli d esame che avvengono nel pomeriggio
 SELECT *
 FROM `exams`
 WHERE `exams`.`date` = '2020/06/20' && `exams`.`hour` > '14:00:00'; 
+
+MILESTONE 6 : Selezionare tutti i corsi di laurea magistrale (38)
+
+SELECT *
+FROM `degrees`
+WHERE `degrees`.`name` LIKE '%magistrale%';
