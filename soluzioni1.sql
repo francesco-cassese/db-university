@@ -45,3 +45,9 @@ MILESTONE 8 : Quanti sono gli insegnanti che non hanno un numero di telefono? (5
 SELECT COUNT(*)
 FROM `teachers`
 WHERE `teachers`.`phone` IS NULL;
+
+BONUS : Ho cercato il nome dei Dipartimenti che si trovano in una piazza
+
+SELECT `name`
+FROM `departments`
+WHERE `departments`.`address` LIKE 'Piazza%';
