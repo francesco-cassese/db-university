@@ -47,6 +47,3 @@ Le soluzioni sono organizzate nel file [soluzioni1.sql](soluzioni1.sql) e copron
 - **Logica condizionale:** Gestione di query complesse tramite operatori logici (`AND`, `OR`) e raggruppamento con parentesi.
     
 - **Ricerca e pulizia:** Utilizzo di `LIKE` per la ricerca testuale e gestione dei campi `NULL`.
-
-### Esempio di esecuzione:
-![Risultato Query](./imgs/sql_img.png)
