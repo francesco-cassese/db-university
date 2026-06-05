@@ -47,3 +47,18 @@ FROM `degrees` AS `d`
 	JOIN `teachers` AS `t`
         ON `t`.`id` = `ct`.`teacher_id`
 WHERE 1;
+
+-- MILESTONE 6: Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
+
+SELECT DISTINCT `t`.`name` AS `teacher_name`, `t`.`surname` AS `teacher_surname`, `de`.`name` AS `departments_name`
+FROM `teachers` AS `t`
+	JOIN `course_teacher` AS `ct`
+		ON `t`.`id` = `ct`.`teacher_id`
+	JOIN `courses` AS `c`
+		ON `c`.`id` = `ct`.`course_id`
+	JOIN `degrees` AS `d`
+		ON `d`.`id` = `c`.`degree_id`
+	JOIN `departments` AS `de`
+		ON `de`.`id` = `d`.`department_id`
+	WHERE `de`.`name` = 'Dipartimento di Matematica'
+    ORDER BY `t`.`name`
