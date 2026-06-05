@@ -47,3 +47,15 @@ Le soluzioni sono organizzate nel file [soluzioni1.sql](soluzioni1.sql) e copron
 - **Logica condizionale:** Gestione di query complesse tramite operatori logici (`AND`, `OR`) e raggruppamento con parentesi.
     
 - **Ricerca e pulizia:** Utilizzo di `LIKE` per la ricerca testuale e gestione dei campi `NULL`.
+
+## 🚀 Fase 3: Query SQL (Giorno 3)
+
+In questa sessione ho sviluppato le query per interrogare il database per ottenere risposte più complesse, organizzando le informazioni in gruppi logici.
+
+Le soluzioni sono organizzate nei file [soluzioni-join.sql](soluzioni-join.sql) e [soluzioni-groupby.sql](soluzioni-groupby.sql) e coprono:
+
+- **Calcoli Statistici:** Utilizzo di funzioni per contare elementi (es. quanti studenti ci sono) o calcolare medie (es. il voto medio di un esame).
+    
+- **Raggruppamento:** Utilizzo di comandi per raggruppare i dati per categoria (es. dividere gli studenti per anno di corso).
+    
+- **Pulizia e Chiarezza:** Gestione delle impostazioni del database per garantire che i risultati siano precisi e utilizzo di nomi personalizzati (alias) per rendere i dati più leggibili.
