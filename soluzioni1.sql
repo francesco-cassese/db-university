@@ -68,16 +68,16 @@ BONUS : Ho selezionato tutti i corsi che valgono tra i 5 e i 10 crediti cfu, est
 
 SELECT *
 FROM `courses`
-WHERE `courses`.`cfu` >= 5 && `courses`.`cfu` <= 10 ;
+WHERE `courses`.`cfu` >= 5 AND `courses`.`cfu` <= 10 ;
 
 BONUS: Ho selezionato tutti i corsi che appartengono al primo anno E che hanno un numero di crediti cfu maggiore o uguale a 10 oppure un numero di crediti minore o uguale a 5.
 
 SELECT *
 FROM `courses`
-WHERE `courses`.`year` = 1 && (`courses`.`cfu` <= 5 || `courses`.`cfu` >= 10);
+WHERE `courses`.`year` = 1 AND (`courses`.`cfu` <= 5 OR `courses`.`cfu` >= 10);
 
 BONUS: Ho selezionato tutti gli studenti nati prima del 1990, escludendo però quelli il cui cognome inizia con la lettera 'S'. 
 
 SELECT *
 FROM `students`
-WHERE YEAR(`students`.`date_of_birth`) < 1990 && `students`.`surname` NOT LIKE 'S%';
+WHERE YEAR(`students`.`date_of_birth`) < 1990 AND `students`.`surname` NOT LIKE 'S%';
