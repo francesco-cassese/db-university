@@ -1,4 +1,4 @@
--- MILESTONE 1 = Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+-- MILESTONE 1: Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
 
 SELECT `s`.`name`,`s`.`surname`, `d`.`name`
 FROM `students` AS `s`
@@ -6,7 +6,7 @@ FROM `students` AS `s`
 		ON `s`.`degree_id` = `d`.`id`
 WHERE `d`.`name` = 'Corso di Laurea in economia'
 
--- MILESTONE 2 = Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
+-- MILESTONE 2: Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
 
 SELECT `d`.`name`, `d`.`level`, `de`.`name`
 FROM `degrees` AS `d`
@@ -14,7 +14,7 @@ FROM `degrees` AS `d`
 		ON `d`.`department_id` = `de`.`id`
 WHERE `d`.`level` = 'magistrale' AND `de`.`name` = 'Dipartimento di Neuroscienze';
 
--- MILESTONE 3 = Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
+-- MILESTONE 3: Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
 
 SELECT `t`.`name`, `t`.`surname`, `c`.`name` AS `course_name` 
 FROM `teachers` AS `t`
@@ -24,7 +24,7 @@ FROM `teachers` AS `t`
 		ON `c`.`id` = `ct`.`course_id`
 WHERE `t`.`id` = 44;
 
--- MILESTONE 4 = Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome.
+-- MILESTONE 4: Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome.
 
 SELECT `s`.`name`, `s`.`surname`, `d`.`name`, `de`.`name`
 FROM `students` AS `s`
