@@ -20,13 +20,13 @@ MILESTONE 4 : Selezionare tutti i corsi del primo semestre del primo anno di un 
 
 SELECT *
 FROM `courses`
-WHERE `courses`.`period` = 'I semestre' && `courses`.`year` = 1; 
+WHERE `courses`.`period` = 'I semestre' AND `courses`.`year` = 1; 
 
 MILESTONE 5 : Selezionare tutti gli appelli d esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020 (21)
 
 SELECT *
 FROM `exams`
-WHERE `exams`.`date` = '2020/06/20' && `exams`.`hour` > '14:00:00'; 
+WHERE `exams`.`date` = '2020/06/20' AND HOUR(`exams`.`hour`) >= 14; 
 
 MILESTONE 6 : Selezionare tutti i corsi di laurea magistrale (38)
 
@@ -56,13 +56,13 @@ BONUS : Ho selezionato gli studenti che sono nati nel 1990 e che non avevano il 
 
 SELECT *
 FROM `students`
-WHERE YEAR(`students`.`date_of_birth`) = 1990 && `students`.`registration_number` IS NULL;
+WHERE YEAR(`students`.`date_of_birth`) = 1990 AND `students`.`registration_number` IS NULL;
 
 BONUS : Ho selezionato gli insegnati che hanno come provider hotmail oppure quelli che non hanno un numero di telefono registrato 
 
 SELECT *
 FROM `teachers`
-WHERE `teachers`.`email` LIKE '%@hotmail.com' || `teachers`.`phone` IS NULL;
+WHERE `teachers`.`email` LIKE '%@hotmail.com' OR `teachers`.`phone` IS NULL;
 
 BONUS : Ho selezionato tutti i corsi che valgono tra i 5 e i 10 crediti cfu, estremi compresi.
 
