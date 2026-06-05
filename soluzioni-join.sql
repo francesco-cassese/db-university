@@ -24,7 +24,8 @@ FROM `teachers` AS `t`
 		ON `c`.`id` = `ct`.`course_id`
 WHERE `t`.`id` = 44;
 
--- MILESTONE 4: Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome.
+-- MILESTONE 4: Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti
+-- e il relativo dipartimento, in ordine alfabetico per cognome e nome.
 
 SELECT `s`.`name`, `s`.`surname`, `d`.`name`, `de`.`name`
 FROM `students` AS `s`
@@ -34,3 +35,15 @@ FROM `students` AS `s`
 		ON `de`.`id` = `d`.`department_id`
 WHERE 1
 ORDER BY `s`.`surname`, `s`.`name`;
+
+-- MILESTONE 5: Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
+
+SELECT `d`.`name` AS `degrees_name`, `c`.`name` AS `couse_name`, `t`.`name`, `t`.`surname`
+FROM `degrees` AS `d`
+	JOIN `courses` AS `c`
+		ON `c`.`degree_id` = `d`.`id`
+	JOIN `course_teacher` AS `ct`
+		ON `c`.`id` = `ct`.`course_id`
+	JOIN `teachers` AS `t`
+        ON `t`.`id` = `ct`.`teacher_id`
+WHERE 1;
