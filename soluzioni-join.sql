@@ -25,3 +25,12 @@ FROM `teachers` AS `t`
 WHERE `t`.`id` = 44;
 
 -- MILESTONE 4 = Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome.
+
+SELECT `s`.`name`, `s`.`surname`, `d`.`name`, `de`.`name`
+FROM `students` AS `s`
+	JOIN `degrees` AS `d`
+		ON `s`.`degree_id` = `d`.`id`
+	JOIN `departments` AS `de`
+		ON `de`.`id` = `d`.`department_id`
+WHERE 1
+ORDER BY `s`.`surname`, `s`.`name`;
